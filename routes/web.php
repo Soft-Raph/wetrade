@@ -25,8 +25,8 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     $user = Auth::user();
-    $details =Trade::query()->where('user_id',$user->id)->get()->sortByDesc('id')->paginate(15);
-    $trans =Transaction::query()->where('user_id',$user->id)->get()->sortByDesc('id')->paginate(15);
+    $details =Trade::query()->where('user_id',$user->id)->get()->sortByDesc('id');
+    $trans =Transaction::query()->where('user_id',$user->id)->get()->sortByDesc('id');
     return view('dashboard', compact('user','details','trans'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 

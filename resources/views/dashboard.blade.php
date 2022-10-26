@@ -26,7 +26,7 @@
                     <form class="w-full max-w-sm" method="Post" action="{{route('trade')}}">
                         @csrf
                         <div class="flex items-center border-b border-teal-500 py-2">
-                            <input id="getcont" class="bg-transparent w-full text-gray-700 mr-3 py-1 px-2" type="text" name="usdt" placeholder="USDT Wallet (BEP20)" required>
+                            <input id="usdt" class="bg-transparent w-full text-gray-700 mr-3 py-1 px-2" type="text" name="usdt" placeholder="USDT Wallet (BEP20)" required>
                             <button id="exampleModalCenter" class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
                                Trade
                             </button>
@@ -36,7 +36,7 @@
                                 <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
                                     <div class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
                                         <h5 class="text-xl font-medium leading-normal text-gray-800" id="exampleModalScrollableLabel">
-                                            USDT Wallet Address:
+                                            USDT Wallet Address: <span id="usdtInput"></span>
                                         </h5>
                                         <button type="button"
                                                 class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
@@ -172,5 +172,4 @@
             @endif
         </table>
     </div>
-
 </x-app-layout>

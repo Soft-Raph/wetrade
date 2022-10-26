@@ -41,6 +41,7 @@
 
         let button = document.getElementById("close");
         btn.onclick = function() {
+            document.getElementById('usdtInput').innerHTML = document.getElementById('usdt').value;
             modal.style.display = "block";
         }
         // We want the modal to close when the OK button is clicked
@@ -49,10 +50,10 @@
         }
 
         window.onclick = function(event) {
-            console.log(event.target);
             if (event.target === modal) {
                 modal.style.display = "none";
             }
         }
     </script>
+<script></script>
 </html>
